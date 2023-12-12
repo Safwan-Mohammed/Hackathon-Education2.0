@@ -12,14 +12,14 @@ function Navbar() {
         <>
             <div>
             <Box bg={'blue'}>
-                <Flex direction={'row'} justifyContent={'space-between'}>
-                    <Box>
-                        <Text fontWeight={600}>
-                            LOGO
+                <Flex direction={'row'} justifyContent={'space-between'} alignItems={'center'} p={'0.5rem'}>
+                    <Box ml={'1rem'}>
+                        <Text fontWeight={600} fontSize={'2.5rem'} >
+                            EDIFY
                         </Text>
                     </Box>
                     <Box>
-                        <Flex direction={'row'}>
+                        <Flex direction={'row'} gap={'1rem'} justifyContent={'center'} alignItems={'center'}>
                             <Button>
                                 HOME
                             </Button>
@@ -35,13 +35,13 @@ function Navbar() {
                             <Button>
                                 SIGN IN
                             </Button>
-                            <Box onClick={() => {
+                            <Button bg={'transparent'} _hover={{style:{background:"transparent"}}} _active={{style:{background:"transparent"}}} size={'xs'} onClick={() => {
                                 toggleColorMode()
                                 setTheme(theme === "dark" ? "light" : "dark")
                             }
                             }>
-                                <Image src={theme == "dark" ? darkLogo : lightLogo} />
-                            </Box>
+                                <Image objectFit={'contain'} src={theme == "dark" ? darkLogo : lightLogo} />
+                            </Button>
                         </Flex>
                     </Box>
                 </Flex>
