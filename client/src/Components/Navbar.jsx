@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Box, Flex, Text, Button, useColorMode, Image } from "@chakra-ui/react"
+import darkLogo from "../images/dark.png"
+import lightLogo from "../images/sun.png"
 
 function Navbar() {
 
@@ -38,7 +40,7 @@ function Navbar() {
                                 setTheme(theme === "dark" ? "light" : "dark")
                             }
                             }>
-                                <Image src={theme == "dark" ? "" : ""} />
+                                <Image src={theme == "dark" ? darkLogo : lightLogo} />
                             </Box>
                         </Flex>
                     </Box>
